@@ -11,6 +11,10 @@
 }
 
 .card:hover {
+    -webkit-transform: rotateY(180deg); /* Для старых версий Chrome, Safari, iOS */
+    -moz-transform: rotateY(180deg);    /* Для старых версий Firefox */
+    -ms-transform: rotateY(180deg);     /* Для старых версий Internet Explorer */
+    -o-transform: rotateY(180deg);      /* Для старых версий Opera */
     transform: rotateY(180deg); /* Переворот при наведении */
   }
 
