@@ -1,0 +1,83 @@
+.card-container {
+    perspective: 1000px; /* Создаем 3D-пространство */
+  }
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    transform-style: preserve-3d; /* Сохраняем 3D-эффект */
+    transition: transform 0.6s; /* Анимация переворота */
+}
+
+.card:hover {
+    transform: rotateY(180deg); /* Переворот при наведении */
+  }
+
+.face-card {
+    transform: rotateY(180deg);
+    border: 1px solid red;
+}
+
+.face-card-icon-top {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+.face-card-icon-top span,
+.face-card-icon-bottom span {
+    font-size: 50px;
+    color: red;
+    font-weight: 600;
+}
+
+.face-card-icon-top img,
+.face-card-icon-bottom img {
+    width: 25px;
+    height: auto;
+}
+
+.face-card-icon-center {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.face-card-icon-center img {
+    width: 25px;
+    height: auto;
+}
+
+.face-card-icon-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    margin: 15px;
+    bottom: 0;
+    right: 0;
+    transform: scaleY(-1) scaleX(-1);
+}
+
+/* shirt-card */
+
+ .shirt-card,
+ .face-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    backface-visibility: hidden; /* Скрыть заднюю сторону при перевороте */
+}
+
+.shirt-card img {
+    width: 250px;
+    height: 100%;
+}
+
